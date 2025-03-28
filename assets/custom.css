@@ -1,0 +1,32 @@
+/* Selected item text fix */
+.custom-dropdown .Select-value-label {
+    color: white !important;
+}
+
+/* Optional: also ensure the control box is styled */
+.custom-dropdown .Select-control {
+    background-color: #007FFF !important;
+    color: white !important;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Placeholder text */
+.custom-dropdown .Select-placeholder {
+    color: white !important;
+}
+
+/* Dropdown menu options */
+.custom-dropdown .Select-menu-outer {
+    background-color: #007FFF !important;
+    color: white !important;
+}
+
+.custom-dropdown .Select-option {
+    background-color: #007FFF !important;
+    color: white !important;
+}
+
+.custom-dropdown .Select-option:hover {
+    background-color: #005FCC !important;
+}

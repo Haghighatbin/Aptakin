@@ -1,8 +1,25 @@
+# =======================================================================================
+# Title: E-AB / SWV Biosensor Simulation Platform
+# Description:
+#     This Dash-based Python application provides a modular simulation
+#     environment for analysing electrochemical aptamer-based (E-AB) sensors
+#     using Square Wave Voltammetry (SWV). It includes built-in support for
+#     empirical double exponential, Butler–Volmer, and Marcus theory models,
+#     and visualises real and fitted electrochemical data in an interactive UI.
+#
+# Author: Dr Amin Haghighatbin
+# Version: 3.0.0
+# License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-ND 4.0)
+# =======================================================================================
+
+# run.py
+
 from app import app
-from layout import main_layout
-import callbacks  
+from layout import create_layout
+import callbacks
 
-app.layout = main_layout
+app.layout = create_layout(app=app)
 
+# Run the Dash server locally (might be deployed to a webserver later)
 if __name__ == "__main__":
     app.run_server(debug=True, host='127.0.0.1', port=8050)
