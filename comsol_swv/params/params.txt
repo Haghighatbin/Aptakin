@@ -1,0 +1,29 @@
+T 298[K] Temperature
+F 96485[C/mol] Faraday constant
+R 8.314[J/mol/K] Gas constant
+c_bulk 1[mM] Bulk concentration
+D_ox 1e-9[m^2/s] Diffusion coeff (oxidised)
+D_red 1e-9[m^2/s] Diffusion coeff (reduced)
+k0 1e-4[m/s] Standard rate constant
+E0 0[V] Standard potential vs ref
+alpha 0.5 Transfer coefficient
+scan_rate 0.1[V/s] Scan rate
+E_start -0.4[V] Starting potential
+E_vertex 0.4[V] Vertex potential
+n                   1  electrons (MB ~1)                                     
+sigma_elec        1.5  S/m, PBS ~150 mM (adjustable)                         
+rElec            1e-3  m (1 mm radius)                                       
+rDom             5e-3  m (5 mm domain radius)                                
+Cdl              2e-2  F/m² (20 μF/cm² typical Au in PBS)                    
+alpha_a           0.5  anodic transfer coef                                  
+alpha_c           0.5  cathodic transfer coef                                
+E0              -0.26  V vs Ag/AgCl (adjust as used historically)            
+Eapp            -0.26  V applied bias for BV linearisation (≈E0)             
+Gamma_MB    1e-11*1e4  mol/m² (1×10⁻¹¹ mol/cm² → m²)                         
+k_on              1e4  1/(M·s)                                               
+k_off            2e-2  1/s                                                   
+beta           1.1e10  1/m (1.1 Å⁻¹)                                         
+d0             3.2e-9  m (reference distance ~closed)                        
+d_open         6.5e-9  m                                                     
+d_closed       3.2e-9  m                                                     
+k0et              500  1/s (nominal pre-exponential) 

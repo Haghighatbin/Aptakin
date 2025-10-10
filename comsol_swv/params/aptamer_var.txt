@@ -1,0 +1,11 @@
+theta_open_ss    k_off/(k_off + k_on*Ctarget)                         Steady-state open fraction                      
+theta_closed_ss  1 - theta_open_ss                                    Bound (closed) fraction                         
+ket_open         k0et*exp(-beta*(d_open - d0))                        ET rate in open conformation                    
+ket_closed       k0et*exp(-beta*(d_closed - d0))                      ET rate in closed conformation                  
+ket              theta_open_ss*ket_open + theta_closed_ss*ket_closed  Weighted average ET rate                        
+omega            2*pi*f                                               Angular frequency                               
+ket_eff          (ket*omega)/(omega + ket)                            Frequency-dependent effective ET                
+i0_raw           n*F*Gamma_MB*ket_eff                                 Unattenuated exchange current density (A/m²)    
+Rct              (R*T)/(n*F*i0_raw)                                   Surface charge-transfer resistance (Ω·m²)       
+atten            1/sqrt(1 + (omega*Rct*Cdl)^2)                        Double-layer RC attenuation                     
+i0               i0_raw*atten                                         Final effective exchange current density (A/m²) 
