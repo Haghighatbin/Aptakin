@@ -355,11 +355,15 @@ where $i_{n}$ is the normal current density from SCD.
 
 ---
 
-### Acknowledgements
+### Notes
 
-This COMSOL module complements the Python side of **Aptakin** and is intended for transparent, reproducible, and interview-friendly demonstration of continuum electrochemistry modelling with explicit scientific rationale.
+This COMSOL module complements the Python side of **Aptakin** and is intended for transparent and reproducible demonstration of continuum electrochemistry modelling with explicit scientific rationale.
 
 ---
 ### Developer
-**Amin Haghighatbin**<br/>
-email: aminhb@tutanota.com
+For academic enquiries, collaborations, or suggestions, please contact:  
+
+**Dr Amin Haghighatbin**  
+[Email](aminhb@tutanota.com) <br/>
+[LinkedIn](https://www.linkedin.com/in/amin-haghighatbin/)
+
