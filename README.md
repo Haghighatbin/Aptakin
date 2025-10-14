@@ -119,6 +119,9 @@ $ python run.py
 │   └── marcus.png
 └── requirements.txt            # Python dependencies
 ```
+---
+## App Screenshot
+<img src="assets/Screenshot_0.png" alt="App_screenshot" width="1200"/>
 
 ---
 
