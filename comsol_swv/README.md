@@ -40,6 +40,7 @@ $$
 $$
 
 Steady state:
+
 $$
 \theta_\mathrm{open}^\ast = \frac{k_\mathrm{off}}{k_\mathrm{off}+k_\mathrm{on}C},\qquad
 \theta_\mathrm{closed}^\ast = \frac{k_\mathrm{on}C}{k_\mathrm{off}+k_\mathrm{on}C}
@@ -56,9 +57,11 @@ $$
 Electron transfer scales exponentially with donor–electrode distance (d):
 
 $$
-k_\mathrm{et}(d) = k_\mathrm{et}^0 ,\exp[-\beta,(d-d_0)]$$
+k_\mathrm{et}(d) = k_\mathrm{et}^0 ,\exp[-\beta,(d-d_0)]
+$$
 
-with tunnelling decay $(\beta \approx 1.1~\text{\AA}^{-1})$,
+with tunnelling decay 
+$(\beta \approx 1.1~{A}^{-1})$,
 $(d_\mathrm{open} \approx 6.5~\text{nm})$, $(d_\mathrm{closed} \approx 3.2~\text{nm})$, reference $(d_0 = d_\mathrm{closed})$.</br>
 
 State-weighted ET rate:<br/>
@@ -72,19 +75,24 @@ $$
 ### 2.3 SWV frequency surrogate (missed transitions at high (f))
 
 Define $(\omega=2\pi f)$. An interrogation that alternates too quickly relative to ET cannot fully relax; we approximate the **effective** rate as:
+
 $$
 k_\mathrm{eff}(f) = \frac{\bar{k}*\mathrm{et},\omega}{\omega + \bar{k}*\mathrm{et}}
 = \frac{1}{\frac{1}{\bar{k}*\mathrm{et}} + \frac{1}{\omega}}
-$$</br>
+$$
+
 the harmonic mean of $(\bar{k}*\mathrm{et})$ and $(\omega)$.
-Limits: $(k_\mathrm{eff}\to \bar{k}*\mathrm{et})$ for $(\omega\gg\bar{k}*\mathrm{et})$ (fast interrogation does **not** speed ET), and $(k_\mathrm{eff}\to \omega)$ for $(\omega\ll\bar{k}_\mathrm{et})$ (interrogation limits).
+
+Limits:
+$k_\mathrm{eff}\to \bar{k}*\mathrm{et}$
+
+for $(\omega\gg\bar{k}*\mathrm{et})$ (fast interrogation does **not** speed ET), and $(k_\mathrm{eff}\to \omega)$ for $(\omega\ll\bar{k}_\mathrm{et})$ (interrogation limits).
 
 ---
 
 ### 2.4 Double-layer attenuation (RC low-pass)
 
 At high (f), capacitive charging suppresses the Faradaic component. Using $(R_\mathrm{ct} = \dfrac{RT}{nF,i_0^\mathrm{raw}})$ (local linearisation) and surface capacitance $(C_\mathrm{dl})$, we apply a first-order low-pass magnitude:
-
 
 $$A(\omega) = \frac{1}{\sqrt{1+(\omega R_\mathrm{ct} C_\mathrm{dl})^2}}$$
 
@@ -101,6 +109,7 @@ i_0(f) = i_0^\mathrm{raw}(f),A(\omega).
 $$
 
 The interfacial current density:
+
 $$
 i_\mathrm{BV} = i_0(f)\left[\exp!\left(\frac{\alpha_a nF\eta}{RT}\right) - \exp!\left(-\frac{\alpha_c nF\eta}{RT}\right)\right],\quad
 \eta = ( \phi_s - \phi_l ) - E^0.
@@ -144,7 +153,11 @@ where $(i_n)$ is the normal current density (A/m²) from SCD.
 | $(r_\mathrm{e})$         |                 1 | mm          | electrode radius           |
 | $(r_\mathrm{dom})$       |                 5 | mm          | domain radius              |
 
-**Sweep ranges:** $(f \in [10,1000]~\text{Hz})$ (log), $(C \in [0.1,100]~\mu\text{M})$ (log).
+**Sweep ranges:** 
+
+$$
+(f \in [10,1000]~\text{Hz}) (log), (C \in [0.1,100]~\mu\text{M}) (log)
+$$
 
 ---
 
@@ -170,7 +183,8 @@ Define:
 * $(k_\mathrm{et}(d_\mathrm{open/closed}))$, $(\bar{k}_\mathrm{et})$
 * $(\omega=2\pi f)$, $(k_\mathrm{eff}(f))$, $(i_0^\mathrm{raw})$, $(R_\mathrm{ct})$, $(A(\omega))$, $(i_0(f))$
 
-*(If using the transient pre-step, replace $(\theta^\ast)$ by the time-dependent $(\theta)$ from **Global ODEs and DAEs**.)*
+
+(If using the transient pre-step, replace $(\theta^\ast)$ by the time-dependent $(\theta)$ from **Global ODEs and DAEs**.)
 
 ### 4.4 Mesh
 
@@ -179,7 +193,7 @@ Physics-controlled is sufficient. Optional boundary layer on the electrode: 4–
 ### 4.5 Studies
 
 * **Route A (recommended for sweeps):** **Stationary** (SCD only) with a **Parametric Sweep** over (f) and (C).
-* **Route B:** **Time Dependent** (global ODE for $(\theta)$) to steady state → **Stationary** SCD using those values.
+* **Route B:** **Time Dependent** (global ODE for $\theta$) to steady state → **Stationary** SCD using those values.
 
 ### 4.6 Derived values and plots
 
@@ -285,7 +299,7 @@ comsol-swv/
 | $\bar{k}_{\mathrm{et}}$ | State-weighted ET rate | $s^{-1}$ | $\theta_{\mathrm{open}}k_{\mathrm{et}}(d_{\mathrm{open}})+\theta_{\mathrm{closed}}k_{\mathrm{et}}(d_{\mathrm{closed}})$ |
 | $f$ | Interrogation frequency | $Hz$ | $sweep: 10–1000$ |
 | $\omega$ | Angular frequency | $s^{-1}$ | $2\pi f$ |
-| $k_{\mathrm{eff}}(f)$ | Effective ET under SWV | $s^{-1}$ | $\dfrac{\bar{k}_{\mathrm{et}}\omega}{\omega+\bar{k}_{\mathrm{et}}}$ |
+| $k_{\mathrm{eff}}(f)$ | Effective ET under SWV | $s^{-1}$ | $\dfrac{\bar{k}\_{\mathrm{et}}\omega}{\omega+\bar{k}\_{\mathrm{et}}}$ |
 | $C_{\mathrm{dl}}$ | Double-layer capacitance (surface) | $F·m^{-2}$ | $0.02 (20 μF·cm^{-2}$) |
 | $R_{\mathrm{ct}}$ | Charge-transfer resistance (surface) | $Ω·m^{2}$ | $\dfrac{RT}{nF\,i_{0}^{\mathrm{raw}}}$ |
 | $A(\omega)$ | RC attenuation magnitude | – | $\dfrac{1}{\sqrt{1+(\omega R_{\mathrm{ct}} C_{\mathrm{dl}})^{2}}}$ |
