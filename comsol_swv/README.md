@@ -224,7 +224,7 @@ run_swv_grid
 
 ---
 
-## 6) Validation protocol (recommended)
+## 6) Validation protocol
 
 1. **Peak current vs frequency:** At a fixed $(C)$ (e.g., 10 µM), compare simulated $(I(f))$ against experimental SWV peak currents; report $(R^2)$.
 2. **Dose–response at $(f_{\text{opt}})$:** Extract $(I(C))$, fit with $(\theta^\ast_\mathrm{closed}(C))$ and report KD error (%).

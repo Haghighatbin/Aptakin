@@ -29,8 +29,9 @@ The software provides an intuitive UI for data input, model fitting, and visual 
 ---
 
 ## Theoretical Background
+<img align="right" src="assets/e-ABvsApt.png" alt="E-AB_SWV" width="600"/>
+Electrochemical aptamer-based (E-AB) sensors represent an advanced class of biosensing platforms in which molecular recognition is transduced into an electrochemical signal via the target-induced conformational change of a surface-immobilised aptamer (oligonucleotide). These structural transitions alter the spatial proximity between a redox-active reporter (commonly methylene blue) and the electrode surface, thereby modulating the electron transfer efficiency. The resulting perturbations in faradaic current are typically interrogated using Square Wave Voltammetry (SWV)—an electroanalytical technique wherein frequency, modulation amplitude, and step potential can be finely tuned to extract kinetic information.
 
-Electrochemical aptamer-based (E-AB) sensors represent an advanced class of biosensing technologies in which molecular recognition is transduced into an electrochemical signal via the target-induced conformational change of a surface-immobilised aptamer. These structural transitions alter the spatial proximity between a redox-active reporter (commonly methylene blue) and the electrode surface, thereby modulating the electron transfer efficiency. The resulting perturbations in faradaic current are typically interrogated using Square Wave Voltammetry (SWV)—a highly sensitive electroanalytical technique wherein frequency, modulation amplitude, and step potential can be finely tuned to extract kinetic information.
 
 At a fundamental level, the electrochemical response—expressed as either peak current or integrated charge—correlates with the degree of aptamer occupancy, and can be modelled at equilibrium using the following Hill–Langmuir-like relationship:
 
